@@ -121,12 +121,12 @@ var App = React.createClass({
 
 
                 <div className="row mainRow" >
-                    <div className="lg-4 sm-12 md-12 standout bottomMargin">
+                    <div className="lg-4 sm-12 md-12 standout bottomMargin has-gutter">
                     Web design is not all about creating good looking pages, but it's also about creating a
                     snappy system that doesn't require the user to wait longer than necessary before
                     the page loads.
                     </div>
-                    <div className="lg-8 sm-12 md-12">
+                    <div className="lg-8 sm-12 md-12 has-gutter">
                         <p className="">
                         BareKit is a promising
                         new CSS framework that is comparable to Bootstrap in many respects, though it
@@ -148,7 +148,7 @@ var App = React.createClass({
 
                 <div className="topPadding clearfix"></div>
 
-                <ul className="features no-bullets">
+                <ul className="features no-bullets ">
                     <li className="sm-12 md-4 lg-4">
                         <div className="row feature text-center">
                             <h5>Responsive</h5>
