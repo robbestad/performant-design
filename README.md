@@ -1,14 +1,12 @@
-# Robbestad.com
+# Performant Design
 
 > Completely reactified
 
 > Uses react-router
 
-> Applies the Flux architecture
+> Primary idea is to build a performant, responsive design based on Barekit
 
-> All data are pulled from an API and stored in a single store on load
-
-Check out [the site](http://www.robbestad.com/)
+Check out [the site](http://performantdesign.herokuapp.com/)
 
 ## Workflow
 
@@ -23,18 +21,6 @@ deployment.
 For deployment on a standard node server, simply build with __npm build__ and start the server with
 __node index.js__.
 
-## TODO
-
- - Write more ___articles___
- - Make a prettier landing page
- - 
-## Stuff that's done
-
- - Set up nodejs server with ___express 4___
- - Configged package.json & gulpfile.js
- - Make a ___Heroku-compatible___ setup 
- - Added the following Heroku config:
- 
 ```
 BUILDPACK_URL:            https://github.com/heroku/heroku-buildpack-nodejs
 NODE_ENV:                 production
