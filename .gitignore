@@ -1,0 +1,7 @@
+*.log
+assets/app.min.js
+assets/bundle.min.js
+node_modules
+.idea
+bower_components
+/js/bundle.js
