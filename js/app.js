@@ -50,7 +50,8 @@ var App = React.createClass({
     getInitialState: function() {
         return {
             loading: true,
-            width:'500'
+            width:'500',
+            scrollTop:0
         };
     },
    
@@ -64,7 +65,10 @@ var App = React.createClass({
     tick: function() {
         var state=this.state;
         state.width=jQuery(".mainRow").width();
-        console.log(state.width);
+        var scrollTop = (window.pageYOffset !== undefined) ?
+            window.pageYOffset : (document.documentElement ||
+            document.body.parentNode || document.body).scrollTop;
+        state.scrollTop=scrollTop;
         this.setState(state);
     },
 
@@ -74,7 +78,17 @@ var App = React.createClass({
     render: function() {
         var sidebarVisible=this.state.sidebarVisible;
         var width = this.state.width;
+        var padding={
+            marginTop:'0px',
+            paddingTop: '0px'
+        };
 
+        if(this.state.scrollTop>250){
+            padding={
+                marginTop:'30px',
+                paddingTop: '0px'
+            };
+        }
         return (<section className="app">
 
             <a id="home"></a>
@@ -89,8 +103,7 @@ var App = React.createClass({
                     <a href="#" className="modal-close right">Close</a>
                     <img className="modal-img lg-12 md-12 sm-12" src="#" alt=""/>
                 </div>
-
-                    <stickyDiv togglepoint="241" top="0" height="40" width={width} >
+                <stickyDiv togglepoint="250" top="0" width={width} >
                     <section className="navbar-wrapper navbar nav">
                         <div className="subnav">
                             <ul className="no-bullets text-center">
@@ -103,10 +116,10 @@ var App = React.createClass({
                             </ul>
                         </div>
                     </section>
-                    <div className="clearfix">&nbsp;</div>
                 </stickyDiv>
 
-                <div className="row mainRow">
+
+                <div className="row mainRow" >
                     <div className="lg-4 sm-12 md-12 standout bottomMargin">
                     Web design is not all about creating good looking pages, but it's also about creating a
                     snappy system that doesn't require the user to wait longer than necessary before

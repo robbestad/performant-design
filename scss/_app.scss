@@ -74,12 +74,14 @@ h1{
 .navbar{
   width: 100%;
   background: white;
+  padding: 0;
+  margin: 0;
   ul{
     width: 100%;
     display: block;
     border-bottom: 1px solid black;
     margin-bottom: 10px;
-    height: 30px;
+    height: 30px!important;
     > li{
       float: left;
       width: 30%;

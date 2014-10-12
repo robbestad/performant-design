@@ -37,7 +37,7 @@
     "react-grid": "^1.1.3",
     "react-router": "^0.8.0",
     "react-sticky": "^1.0.4",
-    "react-stickydiv": "^1.0.5",
+    "react-stickydiv": "~2.0.1",
     "reactify": "~0.14.0",
     "rebound": "0.0.10",
     "resolve": "~0.6.1",
