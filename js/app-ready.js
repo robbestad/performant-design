@@ -1,6 +1,6 @@
 'use strict';
 
-var $ = require("jquery");
+var $ = require("jquery"), jQuery=$;
 
 //initiating jQuery
 $(function ($) {
