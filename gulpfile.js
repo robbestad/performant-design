@@ -3,7 +3,6 @@ var gulp = require('gulp'),
     scss = require('gulp-sass'),
     changed = require('gulp-changed'),
     csso = require('gulp-csso'),
-    uglify = require('gulp-uglify'),
     autoprefixer = require('gulp-autoprefixer'),
     plumber = require('gulp-plumber'),
     notify = require("gulp-notify"),
@@ -29,8 +28,7 @@ var paths = {
         'node_modules/jquery/dist/jquery.js',
         'js/bundle.js'],
     scss: ['./scss/main.scss'],
-    css: ['node_modules/bootstrap/dist/css/bootstrap.css',
-        'css/**/*'],
+    css: ['css/**/*'],
     fonts: ['']
 };
 // css tasks

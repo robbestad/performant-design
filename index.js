@@ -10,7 +10,6 @@ var express = require('express')
     app.use(compress());   
 var css = ['css/main.css'],
     js = ['node_modules/jquery/dist/jquery.js',
-        'js/jquery.parallax-1.1.3.js',
         'js/barekit.min.js',
         'js/bundle.js'],
     title = 'Performant Design';

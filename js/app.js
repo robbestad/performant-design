@@ -93,7 +93,7 @@ var App = React.createClass({
         return (<section className="app">
 
             <a id="home"></a>
-
+            <div className="wrapper">
             <div className="masthead">
                 <h1 className="logo animated zoomIn">Responsive Performant Design</h1>
             </div>
@@ -148,38 +148,42 @@ var App = React.createClass({
 
                 <div className="topPadding clearfix"></div>
 
-                <ul className="features no-bullets ">
-                    <li className="sm-12 md-4 lg-4">
-                        <div className="row feature text-center">
-                            <h5>Responsive</h5>
+                <div className="wrapper">
+                    <h2 className="text-center">Features</h2>
 
-                            <p className="feature-text">It's easy to create responsive pages with CSS frameworks such as BareKit. Try
-                            and expand or shrink this page, or open this page in a mobile browser.</p>
-                        </div>
-                    </li>
-                    <li className="sm-12 md-4 lg-4">
-                        <div className="row feature text-center">
-                            <h5>Sass &amp; Autoprefixer</h5>
+                    <ul className="features no-bullets">
+                        <li className="sm-12 md-4 lg-4">
+                            <div className="row feature text-center">
+                                <h5>Responsive</h5>
 
-                            <p className="feature-text">
-                            The CSS code on this page is written in SASS. The Gulp build system automatically creates all
-                            prefixes
-                            on the fly for compatibility with all browsers.
-                            </p>
-                        </div>
-                    </li>
-                    <li className="sm-12 md-4 lg-4">
-                        <div className="row feature text-center">
-                            <h5>Grid</h5>
+                                <p className="feature-text">It's easy to create responsive pages with CSS frameworks such as BareKit. Try
+                                and expand or shrink this page, or open this page in a mobile browser.</p>
+                            </div>
+                        </li>
+                        <li className="sm-12 md-4 lg-4">
+                            <div className="row feature text-center">
+                                <h5>Sass &amp; Autoprefixer</h5>
 
-                            <p className="feature-text">
-                            Grids have proven to be a very capable way of designing web pages.
-                            BareKit provides a flexible grid that makes setting up pages a breeze.
-                                <a id="automation"></a>
-                            </p>
-                        </div>
-                    </li>
-                </ul>
+                                <p className="feature-text">
+                                The CSS code on this page is written in SASS. The Gulp build system automatically creates all
+                                prefixes
+                                on the fly for compatibility with all browsers.
+                                </p>
+                            </div>
+                        </li>
+                        <li className="sm-12 md-4 lg-4">
+                            <div className="row feature text-center">
+                                <h5>Grid</h5>
+
+                                <p className="feature-text">
+                                Grids have proven to be a very capable way of designing web pages.
+                                BareKit provides a flexible grid that makes setting up pages a breeze.
+                                    <a id="automation"></a>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
 
                 <div className="clearfix"></div>
                 <div className="row">
@@ -268,6 +272,7 @@ var App = React.createClass({
                 <div className="clearfix">&nbsp;</div>
 
 
+            </div>
             </div>
             </section>);
     }
