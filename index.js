@@ -11,8 +11,8 @@ var express = require('express')
 var css = ['css/barekit.css',
            'css/main.css'],
     js = ['node_modules/jquery/dist/jquery.js',
-        'js/barekit.min.js',
         'js/jquery.parallax-1.1.3.js',
+        'js/barekit.min.js',
         'js/bundle.js'],
     title = 'Performant Design';
 if ('production' == app.get('env')) {

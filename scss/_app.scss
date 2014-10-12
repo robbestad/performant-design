@@ -9,6 +9,9 @@ html, body {
   margin: 0;
   padding: 0;
 }
+.app{
+  z-index:999;
+}
 
 body {
   scrolling: touch;
@@ -72,13 +75,15 @@ h1{
   width: 100%;
   background: white;
   ul{
+    width: 100%;
     display: block;
-    height: 30px;
+    border-bottom: 1px solid black;
     margin-bottom: 10px;
+    height: 30px;
     > li{
       float: left;
-      padding: 10px 5px;
-      border-bottom: 1px solid black;
+      width: 30%;
+      background: white;
       > a:link {
         text-decoration: none;
         color: black;

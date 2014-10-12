@@ -9,23 +9,20 @@ $(function ($) {
             self.pageYOffset || document.documentElement.scrollTop  || document.body.scrollTop
     ];
 
-    //(setNavbar = function () {
-    //    $(".navbar ul>li").css("width", ($(".content").width() / 3) - 2 + "px");
-    //})();
-    var setNavbar = (function () {
-        $(".navbar ul>li").css("width", ($(".content").width() / 3) - 2 + "px");
-    }());
-
-
-    $(document).ready(function () {
-        //enabling stickUp on the '.navbar-wrapper' class
-        $('.navbar-wrapper').stickUp();
-        //setting the navbar width
-        setNavbar();
-    });
-    $(window).resize(function () {
-        setNavbar();
-    });
+//    var setNavbar = (function () {
+//        $(".navbar ul>li").css("width", ($(".content").width() / 3) - 2 + "px");
+//    }());
+//
+//
+//    $(document).ready(function () {
+//        //enabling stickUp on the '.navbar-wrapper' class
+//        $('.navbar-wrapper').stickUp();
+//        //setting the navbar width
+//        setNavbar();
+//    });
+//    $(window).resize(function () {
+//        setNavbar();
+//    });
 
     $(".modal-event").on('click',function(){
         $(".modal-img").attr("src", $(this).attr("src"));
