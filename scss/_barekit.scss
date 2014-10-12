@@ -1,0 +1,27 @@
+// Base styles
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+// Global
+@import "barekit/global/mixins";
+@import "barekit/global/variables";
+@import "barekit/global/functions";
+@import "barekit/global/utility";
+
+// Lib
+@import "barekit/lib/normalize";
+
+// Module
+@import "barekit/module/accordion";
+@import "barekit/module/dropdown-nav";
+@import "barekit/module/form";
+@import "barekit/module/grid";
+@import "barekit/module/modal";
+@import "barekit/module/off-canvas";
+@import "barekit/module/tabs";
+@import "barekit/module/toggle";
