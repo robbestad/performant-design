@@ -33,16 +33,16 @@ app.get('/', function(req, res) {
       res.sendFile(__dirname +'/index.prod.html');
   } else {
       var template = swig.compileFile(__dirname + '/index.dev.html');
-  var output = template({
-      css: css,
-      title: title,
-      js: js
-  });
-  res.send(output);
+      var output = template({
+          css: css,
+          title: title,
+          js: js
+      });
+      res.send(output);
   }
 });
 
-app.get(/^(.+)$/, function(req, res) { 
+app.get(/^(.+)$/, function(req, res) {
   if ('production' == app.get('env')) {
     res.setHeader("Cache-Control", "public, max-age=2419200"); // 14 days
     res.setHeader("Expires", new Date(Date.now() + 345600000).toUTCString());
