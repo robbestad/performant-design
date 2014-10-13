@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     notify = require("gulp-notify"),
     browserSync = require('browser-sync'),
     reload = browserSync.reload,
+    shell      = require('gulp-shell'),
     jshint      = require('gulp-jshint'),
     nodemon = require('gulp-nodemon');
 
@@ -32,15 +33,27 @@ var paths = {
     fonts: ['']
 };
 
-//file tasks
-gulp.task('devcp', function(){
-    return gulp.src("./index.html.dev")
-        .pipe(gulp.dest("./index.html"));
-});
-gulp.task('prodcp', function(){
-    return gulp.src("./index.html.prod")
-        .pipe(gulp.dest("./index.html"));
-});
+//maintenance tasks
+gulp.task('test', shell.task([
+    './node_modules/.bin/mocha -t 5000 -b -R spec spec.js'
+]));
+gulp.task('lint', shell.task([
+    './node_modules/.bin/jsxhint -c .jshintrc ./index.js'
+]));
+gulp.task('release-minor', shell.task([
+    'npm version minor'
+]));
+gulp.task('release-major', shell.task([
+    'npm version major'
+]));
+gulp.task('release-patch', shell.task([
+    'npm version patch'
+]));
+gulp.task('publish', shell.task([
+    'git push --tags origin HEAD:master',
+    'git push heroku master'
+]));
+
 
 // css tasks
 gulp.task('scss', function () {
