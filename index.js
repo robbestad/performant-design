@@ -30,16 +30,16 @@ if ('production' == app.get('env')) {
 
 app.get('/', function(req, res) {
   if ('production' == app.get('env')) {
-      var template = swig.compileFile(__dirname + '/index.prod.html');
+      res.sendFile(__dirname +'/index.prod.html');
   } else {
       var template = swig.compileFile(__dirname + '/index.dev.html');
-  }
   var output = template({
       css: css,
       title: title,
       js: js
   });
   res.send(output);
+  }
 });
 
 app.get(/^(.+)$/, function(req, res) { 
