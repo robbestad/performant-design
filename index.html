@@ -26,6 +26,14 @@
                 families: ['Raleway:800']
             }
         });
+    if ( !Function.prototype.hasOwnProperty( 'bind' ) ) {
+        (function () {
+            var shim = document.createElement( 'script' );
+            shim.src = 'node_modules/es5-shim/es5-shim.min.js';
+            var script = document.getElementsByTagName( 'script' )[0];
+            script.parentNode.insertBefore( shim, script );
+        }());
+    }
     </script>
 </head>
 
