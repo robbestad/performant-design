@@ -29,7 +29,11 @@ if ('production' == app.get('env')) {
 }
 
 app.get('/', function(req, res) {
-  var template = swig.compileFile(__dirname + '/index.html');
+  if ('production' == app.get('env')) {
+      var template = swig.compileFile(__dirname + '/index.prod.html');
+  } else {
+      var template = swig.compileFile(__dirname + '/index.dev.html');
+  }
   var output = template({
       css: css,
       title: title,

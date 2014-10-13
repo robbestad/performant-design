@@ -31,6 +31,17 @@ var paths = {
     css: ['css/**/*'],
     fonts: ['']
 };
+
+//file tasks
+gulp.task('devcp', function(){
+    return gulp.src("./index.html.dev")
+        .pipe(gulp.dest("./index.html"));
+});
+gulp.task('prodcp', function(){
+    return gulp.src("./index.html.prod")
+        .pipe(gulp.dest("./index.html"));
+});
+
 // css tasks
 gulp.task('scss', function () {
     return gulp.src(paths.scss)
